@@ -1,0 +1,39 @@
+allowBuilds:
+  esbuild: set this to true or false
+autoInstallPeers: true
+engineStrict: true
+ignoreScripts: true
+lockfileIncludeTarballUrl: true
+minimumReleaseAge: 4320
+preferFrozenLockfile: true
+private: true
+resolutionMode: highest
+saveExact: true
+strictPeerDependencies: true
+strictSsl: true
+verifyStoreIntegrity: true
+catalog:
+  "@changesets/cli": 2.31.0
+  "@eslint/js": 10.0.1
+  "@pixi/devtools": "2.0.1"
+  "@types/node": 26.0.1
+  "@vitest/browser": 4.1.9
+  "@vitest/browser-playwright": 4.1.9
+  "@vitest/coverage-v8": 4.1.9
+  eslint-config-prettier: 10.1.8
+  eslint-plugin-functional: 10.0.0
+  eslint-plugin-jsdoc: 63.0.9
+  eslint-plugin-prettier: 5.5.6
+  eslint-plugin-simple-import-sort: "13.0.0"
+  eslint-plugin-tsdoc: 0.5.2
+  eslint-plugin-unicorn: 69.0.0
+  eslint: 10.5.0
+  globals: 17.7.0
+  knip: 6.21.0
+  pixi.js: "8.19.0"
+  playwright: 1.61.1
+  prettier: 3.8.5
+  typescript-eslint: 8.62.0
+  typescript: 6.0.3
+  vite: 8.1.0
+  vitest: 4.1.9
