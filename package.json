@@ -1,0 +1,74 @@
+{
+  "name": "azean",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A modern JavaScript/TypeScript danmaku game with focus on functional programming patterns and type safety.",
+  "keywords": [
+    "danmaku",
+    "bullet hell",
+    "bullet heaven",
+    "shmup",
+    "Touhou-like"
+  ],
+  "license": "BSD-3-Clause",
+  "author": "Duncan Kolba <duncankolba@gmail.com>",
+  "contributors": [
+    {
+      "name": "Duncan Kolba",
+      "email": "duncankolba@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkolba/azean.git"
+  },
+  "scripts": {
+    "build": "vite build",
+    "changeset:add": "changeset",
+    "changeset:version": "changeset version",
+    "dev": "vite",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "ok": "node scripts/ok.js",
+    "start": "npm run dev",
+    "test": "pnpm run test:chromium && pnpm run test:firefox && pnpm run test:webkit",
+    "test:chromium": "vitest run --browser=chromium --coverage ",
+    "test:firefox": "vitest run --browser=firefox",
+    "test:webkit": "vitest run --browser=webkit",
+    "typecheck": "tsc --noEmit",
+    "upgrade": "pnpm upgrade --latest",
+    "upgrade:interactive": "pnpm upgrade --interactive --latest",
+    "knip": "knip"
+  },
+  "dependencies": {
+    "@pixi/devtools": "catalog:",
+    "pixi.js": "catalog:"
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:",
+    "@eslint/js": "catalog:",
+    "@types/node": "catalog:",
+    "@vitest/browser": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-functional": "catalog:",
+    "eslint-plugin-jsdoc": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
+    "eslint-plugin-simple-import-sort": "catalog:",
+    "eslint-plugin-tsdoc": "catalog:",
+    "eslint-plugin-unicorn": "catalog:",
+    "globals": "catalog:",
+    "knip": "catalog:",
+    "playwright": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  },
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b"
+}

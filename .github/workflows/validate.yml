@@ -1,0 +1,159 @@
+on:
+  workflow_call:
+
+env:
+  NODE_VERSION: "24"
+
+jobs:
+  format:
+    name: 📏 Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.13.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v6
+
+      - name: 📦 Enable pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          cache: true
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: 📥 Download deps
+        run: pnpm ci
+
+      - name: 📏 Format
+        run: |
+          pnpm run format
+          git diff --exit-code
+
+  typecheck:
+    name: ʦ TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.13.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v6
+
+      - name: 📦 Enable pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          cache: true
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: 📥 Download deps
+        run: pnpm ci
+
+      - run: pnpm run typecheck
+
+  lint:
+    name: ⬣ ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.13.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v6
+
+      - name: 📦 Enable pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          cache: true
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: 📥 Download deps
+        run: pnpm ci
+
+      - run: pnpm run lint
+
+  build:
+    name: 🏗 Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.13.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v6
+
+      - name: 📦 Enable pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          cache: true
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: 📥 Download deps
+        run: pnpm ci
+
+      - run: pnpm run build
+
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: ./dist
+
+  test:
+    name: 🎭 Test (${{ matrix.project }})
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v${{ vars.PLAYWRIGHT_VERSION }}
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [chromium, firefox, webkit]
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.13.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v6
+
+      - name: 📦 Enable pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          cache: true
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: 📥 Download deps
+        run: pnpm ci
+
+      - name: 👩‍🔬 Test
+        run: HOME=/root pnpm run test:${{ matrix.project }}
+
+      - if: ${{ matrix.project == 'chromium' }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-${{ matrix.project }}
+          path: ./coverage
+          retention-days: 30
