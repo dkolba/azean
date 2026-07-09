@@ -183,3 +183,4 @@ import{R as e,a as t,b as n,i as r,lt as i,tt as a}from"./Geometry-BMXAhLT0.js";
         data[offset + 2] = v[2];
         data[offset + 3] = v[3];
     `},S=class extends i{constructor({buffer:e,offset:t,size:n}){super(),this.uid=a(`buffer`),this._resourceType=`bufferResource`,this._touched=0,this._resourceId=a(`resource`),this._bufferResource=!0,this.destroyed=!1,this.buffer=e,this.offset=t|0,this.size=n,this.buffer.on(`change`,this.onBufferChange,this)}onBufferChange(){this._resourceId=a(`resource`),this.emit(`change`,this)}destroy(e=!1){this.destroyed=!0,e&&this.buffer.destroy(),this.emit(`change`,this),this.buffer=null,this.removeAllListeners()}};export{_ as a,p as c,c as d,u as f,v as i,d as l,b as n,g as o,l as p,x as r,h as s,S as t,f as u};
+//# sourceMappingURL=BufferResource-MjzC3GJy.js.map
