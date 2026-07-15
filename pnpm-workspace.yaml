@@ -15,7 +15,7 @@ verifyStoreIntegrity: true
 catalog:
   "@changesets/cli": 2.31.0
   "@eslint/js": 10.0.1
-  "@pixi/devtools": "2.0.1"
+  "@pixi/devtools": 2.0.1
   "@types/node": 26.1.1
   "@vitest/browser": 4.1.10
   "@vitest/browser-playwright": 4.1.10
@@ -24,7 +24,7 @@ catalog:
   eslint-plugin-functional: 10.0.0
   eslint-plugin-jsdoc: 63.0.13
   eslint-plugin-prettier: 5.5.6
-  eslint-plugin-simple-import-sort: "13.0.0"
+  eslint-plugin-simple-import-sort: 13.0.0
   eslint-plugin-tsdoc: 0.5.2
   eslint-plugin-unicorn: 71.1.0
   eslint: 10.6.0
@@ -34,6 +34,6 @@ catalog:
   playwright: 1.61.1
   prettier: 3.9.5
   typescript-eslint: 8.63.0
-  typescript: 7.0.2
+  typescript: 6.0.3
   vite: 8.1.4
   vitest: 4.1.10
