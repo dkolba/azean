@@ -60,7 +60,7 @@
     "eslint-plugin-simple-import-sort": "13.0.0",
     "eslint-plugin-tsdoc": "0.5.2",
     "eslint-plugin-unicorn": "71.1.0",
-    "eslint": "10.6.0",
+    "eslint": "10.7.0",
     "globals": "17.7.0",
     "knip": "6.26.0",
     "pixi.js": "8.19.0",
