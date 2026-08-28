@@ -6,7 +6,6 @@ ignoreScripts: true
 lockfileIncludeTarballUrl: true
 minimumReleaseAge: 4320
 preferFrozenLockfile: true
-private: true
 resolutionMode: highest
 saveExact: true
 strictPeerDependencies: true
