@@ -146,6 +146,7 @@ export default defineConfig([
         },
       ],
       "unicorn/no-asterisk-prefix-in-documentation-comments": "off",
+      "unicorn/consistent-arrow-return-style": "off",
     },
   },
 
