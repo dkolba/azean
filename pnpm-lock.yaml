@@ -167,8 +167,8 @@ importers:
   .:
     dependencies:
       pixi.js:
-        specifier: 8.21.0
-        version: 8.21.0
+        specifier: 8.22.0
+        version: 8.22.0
     devDependencies:
       '@changesets/cli':
         specifier: 3.0.3
@@ -178,7 +178,7 @@ importers:
         version: 10.0.1(eslint@10.11.0(jiti@2.7.0))
       '@pixi/devtools':
         specifier: 2.0.1
-        version: 2.0.1(pixi.js@8.21.0)
+        version: 2.0.1(pixi.js@8.22.0)
       '@types/node':
         specifier: 26.6.4
         version: 26.6.4
@@ -1674,8 +1674,8 @@ packages:
     resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==, tarball: https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz}
     engines: {node: '>=12'}
 
-  pixi.js@8.21.0:
-    resolution: {integrity: sha512-GJ/KqBtUuWDBPMQu2D0ZHsRCYOcWRjjKrpyC+3jPQI5JTqHMC5dH8l9sSyvoUT4qJidvRzs1fwFWRWceno2Ltw==, tarball: https://registry.npmjs.org/pixi.js/-/pixi.js-8.21.0.tgz}
+  pixi.js@8.22.0:
+    resolution: {integrity: sha512-QbTANHMZ751MIjLiLSUSM8a7LNMWwMIf0KbRCqlW+SPS9hNLfSVS+cl1O2SEp9g1K/wyLzj/OJHv+1TUfiPr/w==, tarball: https://registry.npmjs.org/pixi.js/-/pixi.js-8.22.0.tgz}
 
   playwright-core@1.63.0:
     resolution: {integrity: sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==, tarball: https://registry.npmjs.org/playwright-core/-/playwright-core-1.63.0.tgz}
@@ -2419,9 +2419,9 @@ snapshots:
 
   '@pixi/colord@2.9.6': {}
 
-  '@pixi/devtools@2.0.1(pixi.js@8.21.0)':
+  '@pixi/devtools@2.0.1(pixi.js@8.22.0)':
     dependencies:
-      pixi.js: 8.21.0
+      pixi.js: 8.22.0
 
   '@pkgr/core@0.3.6': {}
 
@@ -3422,7 +3422,7 @@ snapshots:
 
   picomatch@4.0.7: {}
 
-  pixi.js@8.21.0:
+  pixi.js@8.22.0:
     dependencies:
       '@pixi/colord': 2.9.6
       '@types/earcut': 3.0.0
