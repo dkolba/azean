@@ -31,12 +31,9 @@ const renderCircle = (
 };
 
 /**
- * Impure interpreter: walks the immutable cons-list, processing
- * each render command as a side effect on the Pixi Application.
- * The discriminated union (`cons` | `nil`) is narrowed by the
- * nil-guard, so `commands.head` and `commands.tail` are
- * accessible on the `cons` branch. Recursion replaces what was
- * previously a `commands.forEach` loop over a `ReadonlyArray`.
+ * Impure interpreter: walks the immutable cons-list, processing each render command as a side effect on the Pixi Application.
+ * The discriminated union (`cons` | `nil`) is narrowed by the nil-guard, so `commands.head` and `commands.tail` are accessible on the `cons` branch.
+ * Recursion replaces what was previously a `commands.forEach` loop over a `ReadonlyArray`.
  *
  * @param app - The Pixi Application instance.
  * @param commands - Immutable cons-list of render commands.
