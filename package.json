@@ -62,7 +62,7 @@
     "eslint-plugin-tsdoc": "0.5.4",
     "eslint-plugin-unicorn": "79.0.0",
     "globals": "17.14.0",
-    "knip": "6.45.1",
+    "knip": "6.46.1",
     "playwright": "1.65.1",
     "prettier": "3.10.1",
     "typescript": "5.9.3",
